@@ -28,8 +28,26 @@ interface HomeProps {
 export default function Home({ postsPagination }: HomeProps) {
   return (
     <>
-      <div>Home</div>
-      <div>posts</div>
+      <div className="logo">
+        <i>i</i>
+        <h1>spacetravling</h1>
+        <span>.</span>
+      </div>
+      <div className="posts">
+        <p className="post-title">Como utilizar Hooks</p>
+        <p className="post-subtitle">Como utilizar Hooks</p>
+        <div className="post-info">
+          <div className="created-at">
+            <i>i</i>
+            <p>15 Mar 2021</p>
+          </div>
+          <div className="author">
+            <i>i</i>
+            <p>Joseph Oliveira</p>
+          </div>
+        </div>
+      </div>
+      <div>Carregar mais posts</div>
     </>
   );
 }
@@ -38,7 +56,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
   const data = await prismic.query(
     [Prismic.predicates.at('document.type', 'posts')],
-    { fetch: ['posts.title', 'posts.content'], pageSize: 100 }
+    { fetch: ['posts.title', 'posts.content'], pageSize: 20 }
   );
   return {
     props: {
