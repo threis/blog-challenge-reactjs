@@ -1,0 +1,57 @@
+.logo {
+  margin-top: 5rem;
+  width: 172px;
+  height: 24px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.posts {
+  margin-top: 4rem;
+}
+
+.post-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 2.125rem;
+  letter-spacing: -0.5px;
+  text-align: justify;
+}
+
+.post-subtitle {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  text-align: justify;
+  font-weight: 400;
+}
+
+.post-info {
+  margin-top: 1.625rem;
+  display: flex;
+}
+
+.created-at,
+.author {
+  display: flex;
+
+  margin-right: 2rem;
+  font-weight: 400;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+}
+
+.hidden-posts {
+  margin-top: 3.75rem;
+  background: transparent;
+  color: var(--highlight)
+}

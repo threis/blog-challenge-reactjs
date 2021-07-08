@@ -28,26 +28,28 @@ interface HomeProps {
 
 export default function Home({ postsPagination }: HomeProps) {
   return (
-    <>
-      <div className="logo">
+    <div className={commonStyles.wrapper}>
+      <div className={styles.logo}>
         <img src="/logo.svg" alt="logo" />
       </div>
-      <div className="posts">
-        <p className="post-title">Como utilizar Hooks</p>
-        <p className="post-subtitle">Como utilizar Hooks</p>
-        <div className="post-info">
-          <div className="created-at">
+      <div className={styles.posts}>
+        <p className={styles['post-title']}>Como utilizar Hooks</p>
+        <p className={styles['post-subtitle']}>
+          Pensando m sicronização em vez de ciclos de vida.
+        </p>
+        <div className={styles['post-info']}>
+          <div className={styles['created-at']}>
             <FiCalendar />
             <p>15 Mar 2021</p>
           </div>
-          <div className="author">
+          <div className={styles.author}>
             <FiUser />
             <p>Joseph Oliveira</p>
           </div>
         </div>
       </div>
-      <button className="hidden-posts">Carregar mais posts</button>
-    </>
+      <button className={styles['hidden-posts']}>Carregar mais posts</button>
+    </div>
   );
 }
 
